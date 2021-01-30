@@ -16,7 +16,7 @@ const Wrapper = () => (
                     <li><i className="fas fa-server"></i>Vanilla x2</li>
                     <li className="disabled"><i className="fas fa-vials"></i>Modded x2 - SOON</li>
                 </ul>
-                <a href="#" className="block-title-btn btn-rust small">Play</a>
+                <a href="steam://connect/64.42.181.188:49045" className="block-title-btn btn-rust small">Play</a>
             </div>
             <div className="wrapper-block-container">
                 <div className="d-flex title-page">
