@@ -41,19 +41,19 @@ const Wrapper = () => (
                         <li>Remove Recipe</li>
                     </ul>
                     <ul className="table-item d-flex">
-                        <li>4/02/2021 a las 20:00 GMT+1</li>
+                        <li>4/02/2021 2pm</li>
                         <li>Map Wipe</li>
                         <li>YES</li>
                         <li>NO</li>
                     </ul>
                     <ul className="table-item d-flex">
-                        <li>18/02/2021 a las 20:00 GMT+1</li>
+                        <li>18/02/2021 2pm</li>
                         <li>Map Wipe</li>
                         <li>YES</li>
                         <li>NO</li>
                     </ul>
                     <ul className="table-item d-flex">
-                        <li>25/02/2021 a las 20:00 GMT+1</li>
+                        <li>25/02/2021 2pm</li>
                         <li>Map Wipe</li>
                         <li>YES</li>
                         <li>YES</li>
