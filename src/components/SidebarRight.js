@@ -26,11 +26,6 @@ const SidebarRight = () => (
                     <i><FontAwesomeIcon icon={['fab', 'steam']} /></i>
                 </a>
             </div>
-            <div className="sidebar-block-item">
-                <a href="#">
-                    <i><FontAwesomeIcon icon={['fab', 'facebook-square']} /></i>
-                </a>
-            </div>
         </div>
     </footer>
 )

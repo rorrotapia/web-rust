@@ -16,13 +16,17 @@ function App() {
             Global.btnMenuToggle = param.btnMenuToggle;
             Global.idServer = param.idServer;
             Global.btnMenuToggle.addEventListener('click', Global.navBarToggle);
-            window.addEventListener('load', Global.toggleTabs);
             Global.getServerStatus();
             Global.getServerInfo();
         },
         navBarToggle: function () {
             var element = document.getElementById("app");
-            element.classList.toggle("open");
+            if (element.classList.contains("is-open")) {
+                element.classList.remove("is-open");
+            } else {
+                element.classList.add("is-open");
+            }
+
         },
         toggleTabs: function (){
             const elements = Array.prototype.slice.call(document.querySelectorAll('[data-target]'), 0);
@@ -30,12 +34,20 @@ function App() {
             if (elements.length > 0) {
                 elements.forEach( el => {
                     el.addEventListener('click', () => {
-                        var tabs = Array.prototype.slice.call(document.getElementsByClassName("is-active"),0);
-                        tabs.forEach( el => {
+                        const target = el.dataset.target;
+                        const tabName = el.dataset.tab;
+                        const $target = document.getElementById(target);
+                        const $tab = document.getElementById("tab-"+tabName);
+
+                        $tab.childNodes.forEach( el => {
                             el.classList.remove('is-active');
                         });
-                        const target = el.dataset.target;
-                        const $target = document.getElementById(target);
+
+                        var parentElement = el.parentNode;
+                        parentElement.childNodes.forEach( el => {
+                            el.classList.remove('is-active');
+                        });
+
                         el.classList.add('is-active');
                         $target.classList.add('is-active');
                     });
@@ -60,7 +72,7 @@ function App() {
         getServerInfo: function () {
             Tools.getJson("https://api.rust-servers.info/info/"+Global.idServer, function (reponse) {
                 var seed = reponse.seed
-                var size = (reponse.size !== "") ? reponse.size : 6000;
+                var size = (reponse.size !== "") ? reponse.size : 3000;
                 var url = "https://rustmaps.com/map/"+size+"_"+seed
 
                 var urlElement = document.getElementById('url-map');
@@ -119,15 +131,16 @@ function App() {
 
     window.addEventListener("DOMContentLoaded", (event) => {
         animFade.init();
+        Global.toggleTabs();
         Global.init({
             btnMenuToggle: document.getElementById('icon-menu'),
-            idServer: "3631",
+            idServer: "4824",
         });
     });
   return (
       <Fragment>
           <Video />
-          <div className="App bg-rust-1 text-light d-flex flex-wrap">
+          <div id="app" className="App bg-rust-1 text-light d-flex flex-wrap">
               <SidebarLeft />
               <Wrapper />
               <SidebarRight />

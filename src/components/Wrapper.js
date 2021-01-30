@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 
 const Wrapper = () => (
-    <main className="wrapper tab-content">
+    <main id="tab-content" className="wrapper">
         <div id="icon-menu">&#9776;</div>
         <div id="home" className="tab is-active">
             <div className="container t-center align-self-center">

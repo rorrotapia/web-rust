@@ -12,8 +12,8 @@ const SidebarLeft = () => (
                     <li className="navbar-item is-active" data-target="home" data-tab="content">Home</li>
                     <li className="navbar-item"><a href="https://app.gpay.io/store/rustytrombone"
                                                    className="bg-transparent border-0">Store</a></li>
-                    <li className="navbar-item" data-target="servers">Servers</li>
-                    <li className="navbar-item disabled">Stats (SOON)</li>
+                    <li className="navbar-item" data-target="servers" data-tab="content">Servers</li>
+                    <li className="navbar-item disabled" data-target="stats" data-tab="content">Stats (SOON)</li>
                 </ul>
             </nav>
         </div>
