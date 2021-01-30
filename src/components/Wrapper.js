@@ -26,7 +26,6 @@ const Wrapper = () => (
                 <div id="server-card" className="d-flex">
                     <div className="card-status">
                         <h3 className="title">Status</h3>
-
                         <p>Players : <span id="server-players"></span>/<span id="server-players-max"></span></p>
                     </div>
                     <div className="card-map">
@@ -42,22 +41,22 @@ const Wrapper = () => (
                         <li>Remove Recipe</li>
                     </ul>
                     <ul className="table-item d-flex">
-                        <li>4/03/2021 a las 20:00 GMT+1</li>
+                        <li>4/02/2021 a las 20:00 GMT+1</li>
                         <li>Map Wipe</li>
                         <li>YES</li>
                         <li>NO</li>
                     </ul>
                     <ul className="table-item d-flex">
-                        <li>4/03/2021 a las 20:00 GMT+1</li>
+                        <li>18/02/2021 a las 20:00 GMT+1</li>
                         <li>Map Wipe</li>
                         <li>YES</li>
                         <li>NO</li>
                     </ul>
                     <ul className="table-item d-flex">
-                        <li>4/03/2021 a las 20:00 GMT+1</li>
+                        <li>25/02/2021 a las 20:00 GMT+1</li>
                         <li>Map Wipe</li>
                         <li>YES</li>
-                        <li>NO</li>
+                        <li>YES</li>
                     </ul>
                 </div>
             </div>
