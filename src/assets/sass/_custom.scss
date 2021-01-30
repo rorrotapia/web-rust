@@ -118,8 +118,11 @@
   margin-bottom: 1rem;
 }
 
-.navbar-item * {
-  color: rgba(255, 255, 255,1);
+.nav-tabs *,.wrapper * {
+  color: rgba(255, 255, 255,0.8);
+}
+
+a {
   text-decoration: none;
 }
 
