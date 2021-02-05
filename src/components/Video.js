@@ -1,5 +1,5 @@
 import React from 'react'
-import video from '../assets/video/videohome.mp4';
+import video from '../assets/video/boatvillage1.mp4';
 
 const Video = () => (
     <video className="video" autoPlay muted loop>
